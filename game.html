@@ -1,13 +1,26 @@
 <html>
-<head>
-	<title></title>
-</head>
-<body onkeydown="keyDown(event)">
-	<canvas id="paper" width="400" heigth="400"></canvas>
-
-</body>
-	<script type="text/javascript">
-		
-		</script>
-
-</html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="paper" width="400" height="400"
+    ></canvas>
+    <script>
+    function draw(){
+        ctx.beginPath();
+        ctx.fillStyle = "black";
+        ctx.arc(30, 30, 20, 0, Math.PI*2, true);
+        ctx.fill();
+        ctx.fillStyle = "red";
+        ctx.arc(100, 100, 40, 0, Math.PI*2, true);
+        ctx.fill();
+        ctx.closePath();
+    }
+    </script>    
+  </body>
+</html>  
